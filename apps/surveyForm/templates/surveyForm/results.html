@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Completed Surveys</title>
+  </head>
+  <body>
+    <h1>Submitted Surveys</h1>
+    <form action="/results" method="post">
+      <p> Thank you for submitting this form, you have submitted this form {{request.session.count}} </p>
+      {% csrf_token %}
+      <p>Name: {{request.session.username}} </p>
+      <p>Location: {{request.session.locations}} </p>
+      <p>Favorite Language: {{request.session.language}} </p>
+  </body>
+</html>
